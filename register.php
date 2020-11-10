@@ -32,9 +32,9 @@
         <a href="index.html"><i class="fas fa-code"></i> DevConnector</a>
       </h1>
       <ul>
-        <li><a href="profiles.html">Developers</a></li>
-        <li><a href="register.html">Register</a></li>
-        <li><a href="login.html">Login</a></li>
+        <li><a href="profiles.php">Developers</a></li>
+        <li><a href="register.php">Register</a></li>
+        <li><a href="login.php">Login</a></li>
       </ul>
     </nav>
     <section class="container">
@@ -71,7 +71,7 @@
         <input type="submit" class="btn btn-primary" name='submit' value="submit" />
       </form>
       <p class="my-1">
-        Already have an account? <a href="login.html">Sign In</a>
+        Already have an account? <a href="login.php">Sign In</a>
       </p>
     </section>
     
