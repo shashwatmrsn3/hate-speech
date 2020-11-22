@@ -3,8 +3,6 @@
 
     $sql = "select * from social.user";
     $res = mysqli_query($conn,$sql);
-
-
 ?>
 
 <!DOCTYPE html>

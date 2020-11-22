@@ -1,6 +1,5 @@
 <?php
       include 'C:\xampp\htdocs\social\includes\handlers\loginhandler.php';
-
 ?>
 
 
@@ -61,7 +60,7 @@
         <input type="submit" class="btn btn-primary" name='submit' value="submit" />
       </form>
       <p class="my-1">
-        Don't have an account? <a href="register.html">Sign Up</a>
+        Don't have an account? <a href="register.php">Sign Up</a>
       </p>
     </section>
   </body>

@@ -1,10 +1,6 @@
 <?php
     include 'C:\xampp\htdocs\social\includes\auth\get-user-data.php';
-    include 'C:\xampp\htdocs\social\includes\auth\auth.php';
-
-
-  
-
+    include 'C:\xampp\htdocs\social\includes\auth\auth.php';  
 ?>
 
 
@@ -48,83 +44,64 @@
         <li>
           <a href="login.php" title="Logout">
             <i class="fas fa-sign-out-alt"></i>
-            <span class="hide-sm">Logout</span></a
-          >
+            <span class="hide-sm">Logout</span></a>
         </li>
       </ul>
     </nav>
     <section class="container">
-      <h1 class="large text-primary">
-        Dashboard
-      </h1>
+      <h1 class="large text-primary">Dashboard</h1>
       <p class="lead"><i class="fas fa-user"></i> Welcome <?php echo $name?></p>
-      <div class="dash-buttons">
-        <a href="edit-profile.php" class="btn btn-light"
-          ><i class="fas fa-user-circle text-primary"></i> Edit Profile</a
-        >
-        
+      <div class="dash-buttons">        
+        <?php 
+          $linkName="";
+          if($row2==0) {$linkName ="Create";}
+          else{$linkName ="Edit";}
+        ?> 
+        <a href="editprofile.php" class="btn btn-light"><i class="fas fa-user-circle text-primary"></i> <?php echo $linkName ?> Profile</a> 
       </div>
 
+  
       <h2 class="my-2">Profile</h2>
-      
-
-      <table class="table" >
-          
+      <table class="table" >          
           <tbody>
             <tr>
               <td><b>Bio</b></td>
-              <td class="hide-sm"><?php echo $bio?></td>
-              
+              <td class="hide-sm"><?php echo $bio?></td>              
               <td>
-                <button class="btn btn-danger">
-                  Delete
-                </button>
+                <button class="btn btn-danger">Delete</button>
               </td>
             </tr>
 
             <tr>
               <td><b>Address</b></td>
-              <td class="hide-sm"><?php echo $address?></td>
-              
+              <td class="hide-sm"><?php echo $address?></td>              
               <td>
-                <button class="btn btn-danger">
-                  Delete
-                </button>
+                <button class="btn btn-danger">Delete</button>
               </td>
             </tr>
 
             <tr>
               <td><b>Education</b></td>
-              <td class="hide-sm"><?php echo $education?></td>
-              
+              <td class="hide-sm"><?php echo $education?></td>              
               <td>
-                <button class="btn btn-danger">
-                  Delete
-                </button>
+               <button class="btn btn-danger">Delete</button>
               </td>
             </tr>
 
             <tr>
               <td><b>Job</b></td>
-              <td class="hide-sm"><?php  echo $job?></td>
-              
+              <td class="hide-sm"><?php  echo $job?></td>              
               <td>
-                <button class="btn btn-danger">
-                  Delete
-                </button>
+                <button class="btn btn-danger">Delete</button>
               </td>
             </tr>
             <tr></tr>
           </tbody>
-        </table>
+      </table>
 
-        <div class="my-2">
-            <button class="btn btn-danger">
-                <i class="fas fa-user-minus"></i>
-
-                Delete My Account
-            </button>
-          </div>
+      <div class="my-2">
+        <button class="btn btn-danger"><i class="fas fa-user-minus"></i>Delete My Account</button>
+      </div>
     </section>
 
   </body>

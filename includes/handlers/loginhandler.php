@@ -10,12 +10,15 @@
 	
 
 		$sql = "select * from social.user where email = '$email' and password = '$password'";
-		$result = mysqli_query($conn,$sql);
+		$result = mysqli_query($conn,$sql);		
+		$resultRow = mysqli_fetch_assoc($result);
+
 		if(mysqli_num_rows($result)==0){
 			$error = "Invalid credentials";
 		}else{
 			session_start();
-			$_SESSION['email']  = $email;
+			$_SESSION['email']  = $email;			
+			$_SESSION['id']= $resultRow['id'];
 			header('Location:dashboard.php');
 		}
 	}
