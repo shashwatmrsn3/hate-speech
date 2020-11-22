@@ -16,7 +16,11 @@
 		}else{
 			session_start();
 			$_SESSION['email']  = $email;
-			header('Location:dashboard.php');
+			
+			$row = mysqli_fetch_assoc($result);
+			$id = $row['id'];
+			$_SESSION['id'] = $id;
+ 			header('Location:dashboard.php');
 		}
 	}
 

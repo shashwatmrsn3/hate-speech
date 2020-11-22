@@ -59,7 +59,7 @@
       </h1>
       <p class="lead"><i class="fas fa-user"></i> Welcome <?php echo $name?></p>
       <div class="dash-buttons">
-        <a href="edit-profile.php" class="btn btn-light"
+        <a href="editprofile.php" class="btn btn-light"
           ><i class="fas fa-user-circle text-primary"></i> Edit Profile</a
         >
         
