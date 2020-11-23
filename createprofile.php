@@ -1,5 +1,4 @@
 <?php
-
 	include 'C:\xampp\htdocs\social\includes\handlers\createprofilehandler.php';
 ?>
 
@@ -26,22 +25,23 @@
    <body>
     <nav class="navbar bg-dark">
       <h1>
-        <a href="index.html"><i class="fas fa-code"></i> DevConnector</a>
+        <a href="index.html"><i class="fas fa-code"></i>DevConnector</a>
       </h1>
+
       <ul>
         <li><a href="profiles.html">Developers</a></li>
         <li><a href="posts.html">Posts</a></li>
-        <li>
-          |
-          <a href="dashboard.php" title="Dashboard"
-            ><i class="fas fa-user"></i>
-            <span class="hide-sm">Dashboard</span></a
-          >
+        <li>          |
+          <a href="dashboard.php" title="Dashboard">
+            <i class="fas fa-user"></i>
+            <span class="hide-sm">Dashboard</span>
+          </a>
         </li>
         <li>
           <a href="login.php" title="Logout">
             <i class="fas fa-sign-out-alt"></i>
-            <span class="hide-sm">Logout</span></a>
+            <span class="hide-sm">Logout</span>
+          </a>
         </li>
       </ul>
     </nav>
@@ -51,6 +51,7 @@
       <p class="lead">
         <i class="fas fa-user"></i> Let's get some information to make your profile stand out
       </p> 
+
       <?php echo $errorMessage?>
       <form class="form" method="POST" action="<?php $_SERVER['PHP_SELF'] ?>">        
         <div class="form-group">        
@@ -70,9 +71,8 @@
           <small class="form-text">Enter recent job</small>
         </div>
        
-
-        <input type="submit" class="btn btn-primary my-1" name="submit" />
-        <a class="btn btn-light my-1" href="dashboard.php">Go Back</a>
+        <input type="submit" class="btn btn-primary" name="submit" value="Create" />
+        <a class="btn btn-light" href="dashboard.php">Go Back</a>
       </form>
     </section>
 
