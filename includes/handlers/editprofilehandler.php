@@ -4,8 +4,13 @@
 
 
 <?php 
-$error="";
+$errorMessage="";
 $userid ="";
+$bio=$_POST['bio'];
+$address="";
+$education="";
+$job="";
+$picture="";
 
 if(isset($_POST['submit'])){
 	
@@ -41,33 +46,42 @@ if(isset($_POST['submit'])){
 		$sqlUpdateRowEffected =mysqli_affected_rows($conn);
 		
 		if($sqlUpdateResult==false && $sqlUpdateRowEffected<0){
-			$error = "Cannot update user profile.". mysqli_error($conn);
+			$errorMessage = "Cannot update user profile.". mysqli_error($conn);
 		}else{
 			header('Location:dashboard.php');
 		}
 
-	}
-	else // record does not exist
-	{		
-		//insert user profile
-		$sqlInsertQuery= "INSERT INTO social.profile(picture,job,education,address,bio,uid) 
-							VALUES('$picture','$job','$education','$address','$bio','$userid')";
-		$sqlInsertResult = mysqli_query($conn,$sqlInsertQuery);		
-		$sqlUpdateRowEffected =mysqli_affected_rows($conn);
- 	 	
-		if(!$sqlInsertResult && $sqlUpdateRowEffected < 0)
-		{
-			$error = "Cannot insert user profile.".$userid. mysqli_error($conn);
-		}
-		else
-		{			
-			header('Location:dashboard.php');
-		}
-
-	}
-
-
+	}	
 	
-}//end if
+}//end if post submit
+else{
+	$error ="hello I am get";
+
+	//STEP 1: get the userId from session 
+	session_start();
+	$userid = $_SESSION['id'];	
+
+	//STEP 2: get the user profile data from db 
+	$sqlSelectQuery ="SELECT * FROM social.profile where uid ='$userid'";//crerate query
+	$sqlSelectQueryResult = mysqli_query($conn,$sqlSelectQuery);//execute query
+	$sqlSelectQueryResultRow =mysqli_num_rows($sqlSelectQueryResult); // get no of rows
+
+	if ($sqlSelectQueryResultRow >0) // user profile exists
+	{
+		//get the user profile data and bind it to the local variable
+		$sqlSelectRow =mysqli_fetch_assoc($sqlSelectQueryResult);
+
+		$bio=$sqlSelectRow['bio'];
+		$address=$sqlSelectRow['address'];
+		$education=$sqlSelectRow['education'];
+		$job=$sqlSelectRow['job'];
+		$picture=$sqlSelectRow['picture'];
+	}
+	else// user profile does not exist
+	{
+		$errorMessage ="Sorry user profile does not exist. Please create user profile.";
+	}
+
+}//end else get 
 
 ?>

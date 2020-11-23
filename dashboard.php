@@ -53,11 +53,18 @@
       <p class="lead"><i class="fas fa-user"></i> Welcome <?php echo $name?></p>
       <div class="dash-buttons">        
         <?php 
-          $linkName="";
-          if($row2==0) {$linkName ="Create";}
-          else{$linkName ="Edit";}
+        // this is to generate the link based on user profile
+          $linkName=""; $linkUrl="";
+          if($row2==0) {
+            $linkName ="Create"; 
+            $linkUrl="createprofile.php";
+          }
+          else{
+            $linkName ="Edit"; 
+            $linkUrl="editprofile.php";
+          } 
         ?> 
-        <a href="editprofile.php" class="btn btn-light"><i class="fas fa-user-circle text-primary"></i> <?php echo $linkName ?> Profile</a> 
+        <a href="<?php echo $linkUrl ?>" class="btn btn-light"><i class="fas fa-user-circle text-primary"></i> <?php echo $linkName ?> Profile</a> 
       </div>
 
   
