@@ -1,6 +1,5 @@
 <?php
 	include 'C:\xampp\htdocs\social\includes\handlers\editprofilehandler.php';
-  // this is a test to see if i can push my branch
 ?>
 
 <!DOCTYPE html>
