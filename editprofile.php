@@ -37,7 +37,7 @@
           </a>
         </li>
         <li>
-          <a href="login.php" title="Logout">
+          <a href="includes/auth/logout.php" title="Logout">
             <i class="fas fa-sign-out-alt"></i>
             <span class="hide-sm">Logout</span>
           </a>
