@@ -13,13 +13,16 @@
 		$result = mysqli_query($conn,$sql);		
 		$resultRow = mysqli_fetch_assoc($result);
 
-		if(mysqli_num_rows($result)==0){
+		if(mysqli_num_rows($result)==0)
+		{
 			$error = "Invalid credentials";
-		}else{
+		}
+		else
+		{		
 			session_start();
-			$_SESSION['email']  = $email;			
-			$_SESSION['id']= $resultRow['id'];
-			header('Location:dashboard.php');
+			$_SESSION['email']  = $email;
+			$_SESSION['id'] = $resultRow['id'];		
+ 			header('Location:dashboard.php');
 		}
 	}
 
