@@ -1,6 +1,6 @@
 <?php
     include 'C:\xampp\htdocs\social\includes\auth\get-user-data.php';
-    include 'C:\xampp\htdocs\social\includes\auth\auth.php';  
+   
 ?>
 
 

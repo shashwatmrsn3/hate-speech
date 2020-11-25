@@ -23,24 +23,24 @@
     <title>Welcome To The Developer Connector</title>
   </head>
   <body>
-    <nav class="navbar bg-dark">
+  <nav class="navbar bg-dark">
       <h1>
-        <a href="index.html"><i class="fas fa-code"></i> DevConnector</a>
+        <a href="index.html"><i class="fas fa-code"></i> NepLink</a>
       </h1>
       <ul>
-        <li><a href="profiles.php">Developers</a></li>
-        <li><a href="posts.html">Posts</a></li>
-        <li>          |
-          <a href="dashboard.php" title="Dashboard">
-            <i class="fas fa-user"></i>
-            <span class="hide-sm">Dashboard</span>
-          </a>
+        <li><a href="profiles.php">People</a></li>
+        <li><a href="posts.php">Posts</a></li>
+        <li>
+          |
+          <a href="dashboard.php" title="Dashboard"
+            ><i class="fas fa-user"></i>
+            <span class="hide-sm">Dashboard</span></a
+          >
         </li>
         <li>
           <a href="includes/auth/logout.php" title="Logout">
             <i class="fas fa-sign-out-alt"></i>
-            <span class="hide-sm">Logout</span>
-          </a>
+            <span class="hide-sm">Logout</span></a>
         </li>
       </ul>
     </nav>
