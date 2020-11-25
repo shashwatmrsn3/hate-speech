@@ -42,11 +42,7 @@ CREATE TABLE `profile` (
 -- Dumping data for table `profile`
 --
 
-INSERT INTO `profile` (`id`, `picture`, `bio`, `address`, `education`, `job`, `uid`) VALUES
-(1, 'null', 'Hi my name is user', 'kathmandu', 'cs', 'software', 1),
-(3, '', 'hi my name is ram chandra bhagawan', 'ayodhya', 'high ', 'archer', 8),
-(4, ' ', 'i am the feminine', 'ayodhya', 'high', 'wife', 9),
-(5, ' ', 'My name is hari', 'heaven', 'very high', 'maintainer', 10);
+
 
 -- --------------------------------------------------------
 
@@ -65,15 +61,6 @@ CREATE TABLE `user` (
 -- Dumping data for table `user`
 --
 
-INSERT INTO `user` (`id`, `name`, `email`, `password`) VALUES
-(1, 'user', 'user@user.com', 'password'),
-(4, 'user', 's@s.com', 'password'),
-(5, 'test user', 'test@user.com', 'password'),
-(6, 'test2', 'test2@test2.com', 'password'),
-(7, 'test user', 'test3@test3.com', 'password'),
-(8, 'ram', 'ram@ram.com', 'password'),
-(9, 'sita', 'sita@sita.com', 'password'),
-(10, 'hari', 'hari@hari.com', 'password');
 
 --
 -- Indexes for dumped tables
