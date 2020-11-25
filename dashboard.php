@@ -1,6 +1,6 @@
 <?php
     include 'C:\xampp\htdocs\social\includes\auth\get-user-data.php';
-   
+   $warning="";
 ?>
 
 
@@ -58,14 +58,15 @@
           if($row2==0) {
             $linkName ="Create"; 
             $linkUrl="createprofile.php";
+            $warning="Other people can't connect with you unless you create a profile";
           }
           else{
             $linkName ="Edit"; 
             $linkUrl="editprofile.php";
           } 
         ?> 
-        <a href="<?php echo $linkUrl ?>" class="btn btn-light"><i class="fas fa-user-circle text-primary"></i> <?php echo $linkName ?> Profile</a>      
-      </div>  
+      <span>  <a href="<?php echo $linkUrl ?>" class="btn btn-light"><i class="fas fa-user-circle text-primary"></i> <?php echo $linkName ?> Profile</a>      
+      </div>  <p> <?php echo $warning?></p></span>
   
       <h2 class="my-2">Profile</h2>
       <table class="table" >          
