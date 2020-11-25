@@ -1,5 +1,6 @@
 <?php
 	include 'C:\xampp\htdocs\social\includes\handlers\editprofilehandler.php';
+   include 'C:\xampp\htdocs\social\includes\auth\auth.php';  
 ?>
 
 <!DOCTYPE html>
