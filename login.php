@@ -1,6 +1,6 @@
 <?php
       session_start();
-      if($_SESSION['email']!=null) header('Location:dashboard.php');
+      if(isset($_SESSION['email'])) header('Location:dashboard.php');
      include 'C:\xampp\htdocs\social\includes\handlers\loginhandler.php';
       
 ?>
