@@ -11,13 +11,23 @@
 	$name = $row['name'];
 	$id = $row['id'];
 
-	$sql2 = "select * from social.profile where uid  = '$id'";
-	$res2 = mysqli_query($conn,$sql2);
-	$row2 = mysqli_fetch_assoc($res2);
-	$bio = $row2['bio'];
-	$address = $row2['address'];
-	$education = $row2['education'];
-	$job = $row2['job'];
+	$sqlQueryProfile = "select * from social.profile where uid  = '$id'";
+	$sqlResultProfile = mysqli_query($conn,$sqlQueryProfile);
+	$profile = mysqli_fetch_assoc($sqlResultProfile);
+
+	if ($profile!=null) {
+		$bio = $profile['bio'];
+		$address = $profile['address'];
+		$education = $profile['education'];
+		$job = $profile['job'];
+	}
+	else
+	{
+		$bio = '';
+		$address = '';
+		$education = '';
+		$job ='';
+	}
 	 
 
 

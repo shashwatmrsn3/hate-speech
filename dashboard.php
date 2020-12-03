@@ -55,7 +55,7 @@
         <?php 
         // this is to generate the link based on user profile
           $linkName=""; $linkUrl="";
-          if($row2==0) {
+          if($profile==0) {
             $linkName ="Create"; 
             $linkUrl="createprofile.php";
             $warning="Other people can't connect with you unless you create a profile";
