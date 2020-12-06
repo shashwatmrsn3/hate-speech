@@ -1,7 +1,9 @@
 <?php
-   session_start();
-   if($_SESSION['email']==null) header('Location:login.php');
-   include 'C:\xampp\htdocs\social\includes\config\db.php';
+  session_start();
+  if($_SESSION['email']==null) header('Location:login.php');
+  include 'C:\xampp\htdocs\social\includes\config\db.php';
+  include 'C:\xampp\htdocs\social\functions\userImagesTemplates.php';
+
    
 
     $sql = "select * from social.user inner join social.profile on social.user.id = social.profile.uid";
@@ -38,8 +40,9 @@
         <li><a href="posts.php">Posts</a></li>
         <li>
           |
-          <a href="dashboard.php" title="Dashboard"
-            ><i class="fas fa-user"></i>
+          <a href="dashboard.php" title="Dashboard">
+            <?php GetUserProfileImage()?> 
+            <!--<i class="fas fa-user"></i>-->
             <span class="hide-sm">Dashboard</span></a
           >
         </li>
