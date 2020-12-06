@@ -1,0 +1,18 @@
+CREATE TABLE `userimages` (
+  `Id` int(11) NOT NULL,
+  `UserId` int(11) NOT NULL,
+  `ImageName` varchar(200) NOT NULL,
+  `ImageContent` varchar(200) NOT NULL,
+  `ImageContentType` varchar(200) NOT NULL,
+  `ImageContentLocation` varchar(200) NOT NULL,
+  `IsProfileImage` bit(1) NOT NULL DEFAULT b'0',
+  `CreatedDate` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+ALTER TABLE `userimages`
+  ADD PRIMARY KEY (`Id`,`IsProfileImage`),
+  ADD UNIQUE KEY `FK_UserImages_ON_UserId` (`UserId`);
+
+ALTER TABLE `userimages`
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;

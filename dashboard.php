@@ -1,7 +1,10 @@
 <?php
     include 'C:\xampp\htdocs\social\includes\auth\get-user-data.php';
+    include 'C:\xampp\htdocs\social\functions\userImagesTemplates.php';
    $warning="";
 ?>
+
+
 
 
 <!DOCTYPE html>
@@ -36,10 +39,11 @@
         <li><a href="posts.php">Posts</a></li>
         <li>
           |
-          <a href="dashboard.php" title="Dashboard"
-            ><i class="fas fa-user"></i>
-            <span class="hide-sm">Dashboard</span></a
-          >
+          <a href="dashboard.php" title="Dashboard">
+            <?php GetUserProfileImage()?>           
+          <!--  <i class="fas fa-user"></i> -->
+            <span class="hide-sm">Dashboard</span>
+          </a>
         </li>
         <li>
           <a href="includes/auth/logout.php" title="Logout">
@@ -51,6 +55,9 @@
     <section class="container">
       <h1 class="large text-primary">Dashboard</h1>
       <p class="lead"><i class="fas fa-user"></i> Welcome <?php echo $name?></p>
+      <div class="userImage">
+          <?php GetUserProfileImage('big')?>
+      </div>
       <div class="dash-buttons">        
         <?php 
         // this is to generate the link based on user profile

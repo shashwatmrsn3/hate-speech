@@ -39,40 +39,34 @@
     </nav>
     <section class="container">
       <h1 class="large text-primary">Sign Up</h1>
-      <p class="lead"><i class="fas fa-user"></i> Create Your Account</p>
-      <form class="form" method='POST' action=<?php $_SERVER['PHP_SELF']?> >
+      <p class="lead"><i class="fas fa-user"></i>Create Your Account</p>
+      <p class='error'><?php echo  $errorMessage ?></p>
+
+      <form class="form" method="POST" action="<?php $_SERVER['PHP_SELF']?>" enctype="multipart/form-data" >
+        
         <div class="form-group">
           <input type="text" placeholder="Name" name="name" required />
         </div>
-        <div class="form-group">
-          <div class="form-group">
-           <p class='error'> <?php echo  $emailError ?></p>
+
+        <div class="form-group">   
           <input type="email" placeholder="Email" name="email" required />
+        </div>       
+       
+        <div class="form-group">
+          <input type="password" placeholder="Password" name="password" minLength="6"/>
         </div>
-        
-          
+
+        <div class="form-group">
+          <input type="password" placeholder="Confirm Password"name="password2" minLength="6"/>
         </div>
         <div class="form-group">
-          <input
-            type="password"
-            placeholder="Password"
-            name="password"
-            minLength="6"
-          />
+          <input type="file" name="userProfileImage" class="form-control" required="required" >          
         </div>
-        <div class="form-group">
-          <input
-            type="password"
-            placeholder="Confirm Password"
-            name="password2"
-            minLength="6"
-          />
-        </div>
-        <input type="submit" class="btn btn-primary" name='submit' value="submit" />
+
+        <input type="submit" class="btn btn-primary" name='submit' value="submit"/>
       </form>
-      <p class="my-1">
-        Already have an account? <a href="login.php">Sign In</a>
-      </p>
+
+      <p class="my-1">Already have an account? <a href="login.php">Sign In</a></p>
     </section>
     
 

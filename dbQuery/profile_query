@@ -1,0 +1,19 @@
+CREATE TABLE `profile` (
+  `id` int(11) NOT NULL,
+  `picture` varchar(50) NOT NULL,
+  `bio` varchar(100) NOT NULL,
+  `address` varchar(50) NOT NULL,
+  `education` varchar(50) NOT NULL,
+  `job` varchar(50) NOT NULL,
+  `uid` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+ALTER TABLE `profile`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `uid` (`uid`);
+
+ALTER TABLE `profile`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+ 
+ALTER TABLE `profile`
+  ADD CONSTRAINT `profile_ibfk_1` FOREIGN KEY (`uid`) REFERENCES `user` (`id`);
