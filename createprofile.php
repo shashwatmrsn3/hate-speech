@@ -19,7 +19,7 @@
       crossorigin="anonymous"
     />
 
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/style.css"/>
     <title>Welcome To The Developer Connector</title>
   </head>
    <body>
