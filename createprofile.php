@@ -71,7 +71,7 @@
           <small class="form-text">Enter recent job</small>
         </div>
        
-        <input type="submit" class="btn btn-primary" name="submit" value="Create" />
+        <input type="submit" class="btn btn-primary" name="submit" value="Create"/>
         <a class="btn btn-light" href="dashboard.php">Go Back</a>
       </form>
     </section>
