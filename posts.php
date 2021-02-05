@@ -4,6 +4,7 @@
 	include 'C:\xampp\htdocs\social\includes\handlers\getposts.php';
   include 'C:\xampp\htdocs\social\includes\handlers\posthandler.php';
   include 'C:\xampp\htdocs\social\like.php';
+  include 'C:\xampp\htdocs\social\includes\handlers\checkLikeHandler.php';
   $likeMessage = '';
 ?>
 
@@ -33,11 +34,11 @@
         <a href="index.html"><i class="fas fa-code"></i> DevConnector</a>
       </h1>
       <ul>
-        <li><a href="profiles.html">People</a></li>
-        <li><a href="posts.html">Posts</a></li>
+        <li><a href="profiles.php">People</a></li>
+        <li><a href="posts.php">Posts</a></li>
         <li>
           |
-          <a href="dashboard.html" title="Dashboard"
+          <a href="dashboard.php" title="Dashboard"
             ><i class="fas fa-user"></i>
             <span class="hide-sm">Dashboard</span></a
           >
@@ -99,11 +100,9 @@
             <button name = 'like' value='like' type='submit' class='btn btn-light'>
               <i class='fas fa-thumbs-up'></i>
             </button>
-            <button type='submit' name = 'dislike' value='dislike' class='btn btn-light'>
-              <i class='fas fa-thumbs-down'></i>
-            </button>
+           
             </form>
-            ".$likeMessage."
+            ".checkIfLiked($row['post_id'])."</br>
             <a href='post.php?pid=".$row['post_id']."' class='btn btn-primary'>
               Discussion <span class='comment-count'></span>
             </a>

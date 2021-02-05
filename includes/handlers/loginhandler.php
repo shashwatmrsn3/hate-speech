@@ -21,8 +21,13 @@
 		{		
 			session_start();
 			$_SESSION['email']  = $email;
-			$_SESSION['id'] = $resultRow['id'];		
- 			header('Location:dashboard.php');
+			$_SESSION['id'] = $resultRow['id'];
+			if($resultRow['role'] == "MODERATOR"){
+				header('Location:adminpanel.php');
+			}		
+			else{
+				 header('Location:dashboard.php');
+			}
 		}
 	}
 

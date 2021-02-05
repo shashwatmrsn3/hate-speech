@@ -80,34 +80,26 @@
           <tbody>
             <tr>
               <td><b>Bio</b></td>
-              <td class="hide-sm"><?php echo $bio?></td>              
-              <td>
-                <button class="btn btn-danger">Delete</button>
-              </td>
+              <td class="hide-sm" style='width:700px'><?php echo $bio?></td>              
+              
             </tr>
 
             <tr>
               <td><b>Address</b></td>
-              <td class="hide-sm"><?php echo $address?></td>              
-              <td>
-                <button class="btn btn-danger">Delete</button>
-              </td>
+              <td class="hide-sm" style='width:700px'><?php echo $address?></td>              
+             
             </tr>
 
             <tr>
               <td><b>Education</b></td>
               <td class="hide-sm"><?php echo $education?></td>              
-              <td>
-               <button class="btn btn-danger">Delete</button>
-              </td>
+              
             </tr>
 
             <tr>
               <td><b>Job</b></td>
-              <td class="hide-sm"><?php  echo $job?></td>              
-              <td>
-                <button class="btn btn-danger">Delete</button>
-              </td>
+              <td class="hide-sm" style='width:700px'><?php  echo $job?></td>              
+              
             </tr>
             <tr></tr>
           </tbody>

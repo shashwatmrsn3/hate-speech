@@ -29,11 +29,11 @@
         <a href="index.html"><i class="fas fa-code"></i> DevConnector</a>
       </h1>
       <ul>
-        <li><a href="profiles.html">Developers</a></li>
-        <li><a href="posts.html">Posts</a></li>
+        <li><a href="profiles.php">People</a></li>
+        <li><a href="posts.php">Posts</a></li>
         <li>
           |
-          <a href="dashboard.html" title="Dashboard"
+          <a href="dashboard.php" title="Dashboard"
             ><i class="fas fa-user"></i>
             <span class="hide-sm">Dashboard</span></a
           >
@@ -55,35 +55,26 @@
         profile stand out
       </p>
       
-      <form class="form" method="POST" action=<?php $_SERVER['PHP_SELF']?>>
-        
-        <div class="form-group">
-          <input type="text" placeholder="Bio" name="bio" />
-          <small class="form-text"
-            >Add your bio</small
-          >
+       <form class="form" method="POST" action="<?php $_SERVER['PHP_SELF'] ?>">        
+        <div class="form-group">        
+          <textarea placeholder="A short bio of yourself" name="bio" required="required"><?php echo $bio?></textarea>
+          <small class="form-text">Tell us a little about yourself</small>
         </div>
         <div class="form-group">
-          <input type="text" placeholder="Address" name="address" />
-          <small class="form-text"
-            >Enter your address</small
-          >
+          <input type="text" placeholder="Address" name="address" required="required" value="<?php echo $address?>" />
+          <small class="form-text">Could be your own address</small>
         </div>
         <div class="form-group">
-          <input type="text" placeholder="Education" name="education" />
-          <small class="form-text"
-            >Enter your recent education profile</small
-          >
+          <input type="text" placeholder="Education" name="education" required="required" value="<?php echo $education?>"/>
+          <small class="form-text">Education</small>
         </div>
         <div class="form-group">
-          <input type="text" placeholder="Job" name="job" />
-          <small class="form-text"
-            >Enter your current job</small
-          >
-        </div>
-        
-        <input type="submit" value="submit" name="submit" class="btn btn-primary my-1" />
-        <a class="btn btn-light my-1" href="dashboard.html">Go Back</a>
+          <input type="text" placeholder="Job" name="job" required="required" value="<?php echo $job?>"/>
+          <small class="form-text">Enter recent job</small>
+        </div>       
+
+        <input type="submit" class="btn btn-primary" name="submit" value="Update" />
+        <a class="btn btn-light" href="dashboard.php">Go Back</a>
       </form>
     </section>
   </body>

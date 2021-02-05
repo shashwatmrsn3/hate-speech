@@ -33,11 +33,11 @@
         <a href="index.html"><i class="fas fa-code"></i> DevConnector</a>
       </h1>
       <ul>
-        <li><a href="profiles.html">Developers</a></li>
-        <li><a href="posts.html">Posts</a></li>
+        <li><a href="profiles.php">People</a></li>
+        <li><a href="posts.php">Posts</a></li>
         <li>
           |
-          <a href="dashboard.html" title="Dashboard"
+          <a href="dashboard.php" title="Dashboard"
             ><i class="fas fa-user"></i>
             <span class="hide-sm">Dashboard</span></a
           >
@@ -51,10 +51,10 @@
       </ul>
     </nav>
     <section class="container">
-      <a href="posts.html" class="btn">Back To Posts</a>
+      <a href="posts.php" class="btn">Back To Posts</a>
       <div class="post bg-white p-1 my-1">
         <div>
-          <a href="profile.html">
+          <a href="profile.php">
             <img
               class="round-img"
               src="https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50?s=200"
