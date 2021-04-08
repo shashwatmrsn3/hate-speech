@@ -1,0 +1,1 @@
+Please create folder names "images" under social folder. We need this because all the images/files uploaded will go inside this folder. Else you will have issue while rehistering a user. 
