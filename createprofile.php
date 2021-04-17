@@ -25,12 +25,12 @@
    <body>
     <nav class="navbar bg-dark">
       <h1>
-        <a href="index.html"><i class="fas fa-code"></i>DevConnector</a>
+        <a href="index.html"><i class="fas fa-code"></i> DevConnector</a>
       </h1>
 
       <ul>
-        <li><a href="profiles.html">Developers</a></li>
-        <li><a href="posts.html">Posts</a></li>
+        <li><a href="profiles.php">Developers</a></li>
+        <li><a href="posts.php">Posts</a></li>
         <li>          |
           <a href="dashboard.php" title="Dashboard">
             <i class="fas fa-user"></i>

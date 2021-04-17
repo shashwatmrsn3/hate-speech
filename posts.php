@@ -44,7 +44,7 @@
             <span class="hide-sm">Dashboard</span></a>
         </li>
         <li>
-          <a href="login.html" title="Logout">
+          <a href="login.php" title="Logout">
             <i class="fas fa-sign-out-alt"></i>
             <span class="hide-sm">Logout</span></a
           >
