@@ -5,6 +5,7 @@
   include 'C:\xampp\htdocs\social\includes\handlers\posthandler.php';
   include 'C:\xampp\htdocs\social\like.php';
   include 'C:\xampp\htdocs\social\includes\handlers\checkLikeHandler.php';
+  include 'C:\xampp\htdocs\social\functions\userImagesTemplates.php';
   $likeMessage = '';
 ?>
 
@@ -36,12 +37,11 @@
       <ul>
         <li><a href="profiles.php">People</a></li>
         <li><a href="posts.php">Posts</a></li>
-        <li>
-          |
-          <a href="dashboard.php" title="Dashboard"
-            ><i class="fas fa-user"></i>
-            <span class="hide-sm">Dashboard</span></a
-          >
+        <li>          |
+          <a href="dashboard.php" title="Dashboard">
+            <?php GetUserProfileImage()?> 
+            <!--<i class="fas fa-user"></i>-->
+            <span class="hide-sm">Dashboard</span></a>
         </li>
         <li>
           <a href="login.html" title="Logout">
